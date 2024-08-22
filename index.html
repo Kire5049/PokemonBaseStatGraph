@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>
+            Base Stat Graph
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <input id="gerargraf" type="button" value="gerar gráfico" onclick="FuncGraph();"/>
+        <table id="type" class="table table-bordered table-striped table-fixed">
+            <tbody>
+                <tr id="Stat">
+                    <th colspan="2" rowspan="2">Stat</th>
+                    <th colspan="2">Range</th>
+                </tr>
+                <tr id="Ranges">
+                    <th><small>Lvl 50</small></th>
+                    <th><small>Lvl 100</small></th>
+                </tr>
+                <tr id="hp" style="background: #9EE865; text-align: center;">
+                    <th style="padding-left: 0.2em; padding-right: 0.2em; display: flex; justify-content: space-between;">
+                        <div><a>HP</a>:</div>
+                        <div id="HpNum"></div>
+                    </th>
+                    <td style="width: 255px;">
+                        <span id="stathp"></span>
+                    </td>
+                    <td id="hplvl50"></td>
+                    <td id="hplvl100"></td>
+                </tr>
+                <tr id="atk" style="background: #F5DE69; text-align: center;">
+                    <th style="padding-left: 0.2em; padding-right: 0.2em; display: flex; justify-content: space-between;">
+                        <div><a>Attack</a>:</div>
+                        <div id="AtkNum"></div>
+                    </th>
+                    <td style="width: 255px;">
+                        <span id="statatk"></span>
+                    </td>
+                    <td id="atklvl50"></td>
+                    <td id="atklvl100"></td>
+                </tr>
+                <tr id="def" style="background: #F09A65; text-align: center;">
+                    <th style="padding-left: 0.2em; padding-right: 0.2em; display: flex; justify-content: space-between;">
+                        <div><a>Defense</a>:</div>
+                        <div id="DefNum"></div>
+                    </th>
+                    <td style="width: 255px;" >
+                        <span id="statdef"></span>
+                    </td>
+                    <td id="deflvl50"></td>
+                    <td id="deflvl100"></td>
+                </tr>
+                <tr id="spatk" style="background: #66D8F6; text-align: center;">
+                    <th style="padding-left: 0.2em; padding-right: 0.2em; display: flex; justify-content: space-between;">
+                        <div><a>Sp.Attack</a>:</div>
+                        <div id="SpAtkNum"></div>
+                    </th>
+                    <td style="width: 255px;">
+                        <span id="statspatk"></span>
+                    </td>
+                    <td id="spatklvl50"></td>
+                    <td id="spatklvl100"></td>
+                </tr>
+                <tr id="spdef" style="background: #899EEA; text-align: center;">
+                    <th style="padding-left: 0.2em; padding-right: 0.2em; display: flex; justify-content: space-between;">
+                        <div><a>Sp.Def</a>:</div>
+                        <div id="SpDefNum"></div>
+                    </th>
+                    <td style="width: 255px;">
+                        <span id="statspdef"></span>
+                    </td>
+                    <td id="spdeflvl50"></td>
+                    <td id="spdeflvl100"></td>
+                </tr>
+                <tr id="speed" style="background: #E46CCA; text-align: center;">
+                    <th style="padding-left: 0.2em; padding-right: 0.2em; display: flex; justify-content: space-between;">
+                        <div><a>Speed</a>:</div>
+                        <div id="SpeedNum"></div>
+                    </th>
+                    <td style="width: 255px;">
+                        <span id="statspeed"></span>
+                    </td>
+                    <td id="speedlvl50"></td>
+                    <td id="speedlvl100"></td>
+                </tr>
+                <tr id="total" style="background: #F5A2F5;">
+                    <th style="width: 6.5em; padding-left: 0.2em; padding-right: 0.2em; display: flex; justify-content: space-between;">
+                        <div>Total:</div>
+                        <div id="valuetotal"></div>
+                    </th>
+                    <td colspan="3"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button id="convert">Convert to image</button>
+
+        <div id="result"></div>
+        <script type="text/javascript" src="html2canvas.js"></script>
+        <script>
+            function convertToImage() {
+    var resultDiv = document.getElementById("result");
+            html2canvas(document.getElementById("type"), {
+                onrendered: function(canvas) {
+                    var img = canvas.toDataURL("image/png");
+                    result.innerHTML = '<a download="graph.jpeg" href="'+img+'">graph</a>';
+                    }
+            });
+}
+var convertBtn = document.getElementById("convert");
+         convertBtn.addEventListener('click', convertToImage)
+        </script>
+    </body>
+</html>

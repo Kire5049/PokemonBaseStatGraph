@@ -1,0 +1,59 @@
+#barraHP {
+    background-color: #69DC12;
+    border: 1px;
+    border-color: #448F0C;
+    border-style: solid;
+    height: 20px;
+}
+
+#barraAtk{
+    background-color: #E5CC18;
+    border: 1px;
+    border-color: #9B8510;
+    border-style: solid;
+    height: 20px;
+}
+
+#barraDef{
+    background-color: #E86412;
+    border: 1px;
+    border-color: #97410C;
+    border-style: solid;
+    height: 20px;
+}
+
+#barraSpAtk{
+    background-color: #14C3F1;
+    border: 1px;
+    border-color: #0D7F9D;
+    border-style: solid;
+    height: 20px;
+}
+
+#barraSpDef{
+    background-color: #4A6ADF;
+    border: 1px;
+    border-color: #304591;
+    border-style: solid;
+    height: 20px;
+}
+
+#barraSpeed{
+    background-color: #D51DAD;
+    border: 1px;
+    border-color: #8B1370;
+    border-style: solid;
+    height: 20px;
+}
+
+#type{
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -icab-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-collapse: separate;
+    white-space: nowrap;
+}
+

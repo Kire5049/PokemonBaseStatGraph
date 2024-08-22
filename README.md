@@ -1,0 +1,1 @@
+Um gráfico de Stat Base de Pokemon baseado no da Bulbapedia
