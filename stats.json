@@ -1,0 +1,14 @@
+obj =
+{
+    "hp" : "100",
+    "atk" : "100",
+    "def" : "100",
+    "spatk" : "100",
+    "spdef" : "100",
+    "speed" : "100"
+},
+type =
+{
+    "type1" : "Ghost",
+    "type2" : "Fire"
+}

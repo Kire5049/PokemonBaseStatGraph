@@ -1,18 +1,18 @@
 
 function FuncGraph() {
     //base stats
-    const baseHP = 97;
-    const baseAtk = 33;
-    const baseDef = 55;
-    const baseSpAtk = 155;
-    const baseSpDef = 105;
-    const baseSpeed = 80;
+    const baseHP = obj.hp;
+    const baseAtk = obj.atk;
+    const baseDef = obj.def;
+    const baseSpAtk = obj.spatk;
+    const baseSpDef = obj.spdef;
+    const baseSpeed = obj.speed;
     //total
-    const total = baseHP + baseAtk + baseDef + baseSpAtk + baseSpDef + baseSpeed;
+    const total = (baseHP * 1) + (baseAtk * 1) + (baseDef * 1) + (baseSpAtk * 1) + (baseSpDef * 1) + (baseSpeed * 1);
 
     //Types
-    let Type1 = "Ground";
-    let Type2 = "Dark";
+    let Type1 = type.type1;
+    let Type2 = type.type2;
     //["Normal", "Fire", "Fighting", "Water", "Flying", "Grass", "Poison", "Electric", "Ground", "Psychic", "Rock", "Ice", "Bug", "Dragon", "Ghost", "Dark", "Steel", "Fairy"]
 
 
@@ -107,75 +107,57 @@ function FuncGraph() {
     switch(Type1){
         case "Normal":
             document.getElementById("type").style.background = "#9FA19F";
-            document.getElementById("total").style.background = "#9FA19F";
         break;
         case "Fire":
             document.getElementById("type").style.background = "#E62829";
-            document.getElementById("total").style.background = "#E62829";
         break;
         case "Fighting":
             document.getElementById("type").style.background = "#FF8000";
-            document.getElementById("total").style.background = "#FF8000";
         break;
         case "Water":
             document.getElementById("type").style.background = "#2980EF";
-            document.getElementById("total").style.background = "#2980EF";
         break;
         case "Flying":
             document.getElementById("type").style.background = "#81B9EF";
-            document.getElementById("total").style.background = "#81B9EF";
         break;
         case "Grass":
             document.getElementById("type").style.background = "#3FA129";
-            document.getElementById("total").style.background = "#3FA129";
         break;
         case "Poison":
             document.getElementById("type").style.background = "#9141CB";
-            document.getElementById("total").style.background = "#9141CB";
         break;
         case "Electric":
             document.getElementById("type").style.background = "#FAC000";
-            document.getElementById("total").style.background = "#FAC000";
         break;
         case "Ground":
             document.getElementById("type").style.background = "#915121";
-            document.getElementById("total").style.background = "#915121";
         break;
         case "Psychic":
             document.getElementById("type").style.background = "#EF4179";
-            document.getElementById("total").style.background = "#EF4179";
         break;
         case "Rock":
             document.getElementById("type").style.background = "#AFA981";
-            document.getElementById("total").style.background = "#AFA981";
         break;
         case "Ice":
             document.getElementById("type").style.background = "#3DCEF3";
-            document.getElementById("total").style.background = "#3DCEF3";
         break;
         case "Bug":
             document.getElementById("type").style.background = "#91A119";
-            document.getElementById("total").style.background = "#91A119";
         break;
         case "Dragon":
             document.getElementById("type").style.background = "#5060E1";
-            document.getElementById("total").style.background = "#5060E1";
         break;
         case "Ghost": 
             document.getElementById("type").style.background = "#704170";
-            document.getElementById("total").style.background = "#704170";
         break
         case "Dark":
             document.getElementById("type").style.background = "#624D4E";
-            document.getElementById("total").style.background = "#624D4E";
         break;
         case "Steel":
             document.getElementById("type").style.background = "#60A1B8";
-            document.getElementById("total").style.background = "#60A1B8";
         break
         case "Fairy":
             document.getElementById("type").style.background = "#EF70EF";
-            document.getElementById("total").style.background = "#EF70EF";
         break
     }
 
