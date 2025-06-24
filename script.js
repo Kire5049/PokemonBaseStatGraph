@@ -1,23 +1,32 @@
 
 function FuncGraph() {
     //base stats
-    const baseHP = obj.hp;
-    const baseAtk = obj.atk;
-    const baseDef = obj.def;
-    const baseSpAtk = obj.spatk;
-    const baseSpDef = obj.spdef;
-    const baseSpeed = obj.speed;
+    const baseHP = document.getElementById("hp").value;
+    const baseAtk = document.getElementById("atk").value;
+    const baseDef = document.getElementById("def").value;
+    const baseSpAtk = document.getElementById("spatk").value;
+    const baseSpDef = document.getElementById("spdef").value;
+    const baseSpeed = document.getElementById("speed").value;
     //total
     const total = (baseHP * 1) + (baseAtk * 1) + (baseDef * 1) + (baseSpAtk * 1) + (baseSpDef * 1) + (baseSpeed * 1);
 
     //Types
-    let Type1 = type.type1;
-    let Type2 = type.type2;
+    let Type1 = document.getElementById("type1").value;
+    let Type2 = document.getElementById("type2").value;
     //["Normal", "Fire", "Fighting", "Water", "Flying", "Grass", "Poison", "Electric", "Ground", "Psychic", "Rock", "Ice", "Bug", "Dragon", "Ghost", "Dark", "Steel", "Fairy"]
 
+    if(Type2=="none"){
+        Type2 = Type1;
+    }
 
     console.log(Type1);
     console.log(Type2);
+    console.log(baseHP);
+    console.log(baseAtk);
+    console.log(baseDef);
+    console.log(baseSpAtk);
+    console.log(baseSpDef);
+    console.log(baseSpeed);
 
     //place number
     document.getElementById("HpNum").innerHTML = baseHP;
