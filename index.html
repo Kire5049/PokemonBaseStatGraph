@@ -63,6 +63,10 @@
                 <option value="Fairy" class="Fairy">Fairy</option>
             </select>
         </div>
+        <div>
+            <label>Name</label>
+            <input type="text" id="name">
+        </div>
 
         <table id="type" class="table table-bordered table-striped table-fixed">
             <tbody>
@@ -164,7 +168,8 @@
             html2canvas(document.getElementById("type"), {
                 onrendered: function(canvas) {
                     var img = canvas.toDataURL("image/png");
-                    result.innerHTML = '<a download="graph.jpeg" href="'+img+'">graph</a>';
+                    var pokeName = document.getElementById("name").value;
+                    result.innerHTML = '<a download="'+pokeName+'.png" href="'+img+'">'+pokeName+'</a>';
                     }
             });
 }
